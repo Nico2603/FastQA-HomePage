@@ -27,39 +27,10 @@ Para la construcción de la página, utilizamos:
 
 ---
 
-## 🛠 Cómo Ejecutar Localmente
-
-Si deseas visualizar el proyecto en tu máquina local:
-
-1. **Clona el repositorio**:
-   ```sh
-   git clone https://github.com/Uruena2603/FastQA-HomePage.git
-   ```
-2. **Accede al directorio del proyecto**:
-   ```sh
-   cd FastQA-HomePage
-   ```
-3. **Instala las dependencias**:
-   ```sh
-   npm install
-   ```
-4. **Inicia el servidor de desarrollo**:
-   ```sh
-   npm run dev
-   ```
-5. **Abre el navegador y accede a**:
-   ```sh
-   http://localhost:5173/
-   ```
-
----
-
 ## 👥 Contribuidores
 
 El proyecto está desarrollado por:
 
-- **Juan Alejandro Urueña Serna** - [GitHub Profile](https://github.com/Uruena2603)
 - **Nicolás Ceballos Brito** - [GitHub Profile](https://github.com/Nico2603)
-
-Si deseas contribuir, por favor abre un **Pull Request** o reporta un **Issue**.
+- **Juan Alejandro Urueña Serna** - [GitHub Profile](https://github.com/Uruena2603)
 
