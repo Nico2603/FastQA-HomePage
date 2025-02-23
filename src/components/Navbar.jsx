@@ -13,7 +13,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scroll suave al hacer click en los enlaces
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const element = document.querySelector(targetId);
@@ -26,7 +25,16 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <h1>FastQA</h1>
+        
+        {/* Logo + Título */}
+        <div className="logo-title">
+          <img 
+            src="./src/assets/logo.png" 
+            alt="FastQA Logo" 
+            className="logo"
+          />
+          <h1>FastQA</h1>
+        </div>
 
         {/* Botón de menú hamburguesa para móvil */}
         <button

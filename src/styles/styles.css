@@ -512,5 +512,23 @@
     .contact-form {
       padding: 20px;
     }
+    
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo {
+      width: 40px;      /* Ajusta el tamaño según desees */
+      height: 40px;
+      object-fit: contain; 
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.1); /* Animación sutil al pasar el mouse */
+    }
+    
   }
   
