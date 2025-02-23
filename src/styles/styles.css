@@ -543,8 +543,8 @@
     }
     
     .logo {
-      width: 40px;
-      height: 40px;
+      width: 50px;      /* Ajusta el tamaño según desees */
+      height: auto;     /* Mantiene la proporción de la imagen */
       object-fit: contain; 
       transition: transform 0.3s ease;
     }
