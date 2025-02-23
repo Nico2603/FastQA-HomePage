@@ -6,6 +6,6 @@ export default defineConfig({
   base: "/FastQA-HomePage/", // Asegurar que sea el nombre exacto del repo en GitHub
   build: {
     outDir: "dist",
-    emptyOutDir: true, // Limpia `dist/` antes de cada build para evitar conflictos
+    emptyOutDir: true, // Limpia `dist/` antes de cada build
   },
 });
