@@ -1,6 +1,30 @@
+import { useEffect, useRef, useState } from "react";
+
 export default function Features() {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();  // Desconecta el observador después de ver la sección
+        }
+      },
+      { threshold: 0.2 }  // El 20% de la sección debe estar visible
+    );
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();  // Limpieza
+  }, []);
+
   return (
-    <section className="section" id="features">
+    <section
+      className={`section ${isVisible ? 'visible' : ''}`}
+      id="features"
+      ref={ref}
+    >
       <h2>¿Por qué elegir FastQA?</h2>
       <p>
         Nuestra experiencia en testing automatizado nos permite ofrecer una 
