@@ -301,6 +301,15 @@
     opacity: 0;
     animation: slideIn 0.5s ease-out forwards;
   }
+
+  .hero-contact-form {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 90%;
+    z-index: 2000;
+  }
   
   .hero-list li:nth-child(1) { animation-delay: 0.3s; }
   .hero-list li:nth-child(2) { animation-delay: 0.5s; }

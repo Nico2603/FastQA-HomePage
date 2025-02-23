@@ -7,6 +7,12 @@ export default function Features() {
         plataforma estable y eficiente para cualquier proyecto de software, 
         abarcando pruebas unitarias, de integración y end-to-end.
       </p>
+      <h2>Nuestros Servicios</h2>
+      <p>
+        Te ayudamos a automatizar tus pruebas de software con tecnologías como 
+        Cypress, Selenium y Appium, además de integrar procesos de CI/CD para 
+        un desarrollo continuo y seguro.
+      </p>
     </section>
   );
 }

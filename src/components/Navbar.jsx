@@ -5,11 +5,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -25,18 +22,15 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        
-        {/* Logo + Título */}
         <div className="logo-title">
           <img 
-            src="./src/assets/logo.png" 
+            src="./src/assets/logo.svg" 
             alt="FastQA Logo" 
             className="logo"
           />
           <h1>FastQA</h1>
         </div>
 
-        {/* Botón de menú hamburguesa para móvil */}
         <button
           className="mobile-menu-button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
