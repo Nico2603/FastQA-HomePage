@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/FastQA-HomePage/", // Asegurar que sea el nombre exacto del repo en GitHub
+  base: "/FastQA-HomePage/", // Nombre exacto de tu repo
   build: {
-    outDir: "dist",
-    emptyOutDir: true, // Limpia `dist/` antes de cada build
+    outDir: "docs",    // <<--- El build final va a esta carpeta
+    emptyOutDir: true, // Limpia "docs/" antes de cada build
   },
 });
