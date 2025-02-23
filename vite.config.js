@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/FastQA-HomePage/",  // Asegura que sea el nombre exacto del repo en GitHub
   build: {
-    outDir: "docs",           // GitHub Pages solo permite /docs
-    emptyOutDir: true,        // Limpia "docs/" antes de cada build
+    outDir: "docs",           // Generar el build en `docs/`
+    emptyOutDir: true,        // Limpia la carpeta antes del build
   },
 });
