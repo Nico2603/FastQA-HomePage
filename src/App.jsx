@@ -1,18 +1,20 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import Features from "./components/Features.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import "./styles/styles.css";
 
 export default function App() {
   return (
-    <>
+    <div>
       <Navbar />
-      <Hero />
-      <Features />
-      <Contact />
+      <main>
+        <Hero />
+        <Features />
+        <Contact />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
