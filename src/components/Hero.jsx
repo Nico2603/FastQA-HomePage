@@ -24,15 +24,21 @@ export default function Hero() {
         </button>
       </div>
 
+      {/* Overlay con Formulario */}
       {formVisible && (
-        <div className="contact-form hero-contact-form">
-          <h3>Déjanos tu mensaje</h3>
-          <form>
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Correo Electrónico" required />
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
+        <div className="overlay" onClick={() => setFormVisible(false)}>
+          <div
+            className="contact-form hero-contact-form"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3>Déjanos tu mensaje</h3>
+            <form>
+              <input type="text" placeholder="Nombre" required />
+              <input type="email" placeholder="Correo Electrónico" required />
+              <textarea placeholder="Mensaje" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
         </div>
       )}
     </section>

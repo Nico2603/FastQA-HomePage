@@ -2,9 +2,9 @@
    Variables & Animations
    ========================= */
    :root {
-    --primary-color: #0066cc;    /* Azul profundo */
-    --primary-light: #3389db; 
-    --secondary-color: #ff7f00;  /* Naranja */
+    --primary-color: #0066cc;
+    --primary-light: #3389db;
+    --secondary-color: #ff7f00;
     --secondary-light: #ff9933;
     --background-color: #ffffff;
     --text-color: #333333;
@@ -63,7 +63,7 @@
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     padding: 15px 20px;
     display: flex;
-    justify-content: center; /* Ajustado para centrar .navbar-container */
+    justify-content: center;
     align-items: center;
     box-shadow: 0 4px 15px var(--shadow-color);
     position: sticky;
@@ -284,7 +284,6 @@
     line-height: 1.8;
   }
   
-  /* Lista del Hero */
   .hero-list {
     list-style: none;
     padding: 0;
@@ -300,15 +299,6 @@
     align-items: center;
     opacity: 0;
     animation: slideIn 0.5s ease-out forwards;
-  }
-
-  .hero-contact-form {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 400px;
-    width: 90%;
-    z-index: 2000;
   }
   
   .hero-list li:nth-child(1) { animation-delay: 0.3s; }
@@ -334,21 +324,31 @@
     animation-delay: inherit;
   }
   
-  /* Contact Form emergente dentro del Hero */
-  .contact-form {
+  /* Overlay (Fondo Oscuro) */
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Contact Form emergente (Modal) */
+  .contact-form.hero-contact-form {
     background: white;
     color: #333;
     padding: 40px;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width: 90%;
     max-width: 500px;
     text-align: left;
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 1; /* Se quita la animación fadeIn si deseas que aparezca instant */
+    position: relative; /* for clarity */
+    transform: none;
   }
   
   .contact-form h3 {
@@ -423,7 +423,7 @@
   }
   
   /* =========================
-     .section (Features, Contact, etc.)
+     Secciones (Features, Contact, etc.)
      ========================= */
   .section {
     padding: 60px;
@@ -440,6 +440,20 @@
   .section.visible {
     transform: translateY(0);
     opacity: 1;
+  }
+  
+  /* Listas en Features / Contact */
+  .feature-list, .contact-list {
+    list-style: disc;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .feature-list li, .contact-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
   }
   
   /* =========================
@@ -529,15 +543,13 @@
     }
     
     .logo {
-      width: 40px;      /* Ajusta el tamaño según desees */
+      width: 40px;
       height: 40px;
       object-fit: contain; 
       transition: transform 0.3s ease;
     }
     
     .logo:hover {
-      transform: scale(1.1); /* Animación sutil al pasar el mouse */
+      transform: scale(1.1);
     }
-    
   }
-  
