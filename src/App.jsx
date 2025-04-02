@@ -14,11 +14,21 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <AboutUs />
-        <Services />
-        <Testimonials />
-        <FAQ />
-        <Contact />
+        <section id="about">
+          <AboutUs />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
       <Footer />
     </div>
